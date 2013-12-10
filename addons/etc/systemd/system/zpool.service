@@ -1,0 +1,10 @@
+[Unit]
+Description=import zpools
+Wants=zfs.service
+
+[Service]
+ExecStart=/sbin/zpool import -f -a
+Type=oneshot
+
+[Install]
+WantedBy=basic.target
