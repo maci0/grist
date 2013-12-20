@@ -1,3 +1,4 @@
+cat > /etc/systemd/system/sethostname.service << EOF
 [Unit]
 Description=set hostname
 
@@ -7,3 +8,7 @@ Type=oneshot
 
 [Install]
 WantedBy=basic.target
+EOF
+
+systemctl enable sethostname.service
+

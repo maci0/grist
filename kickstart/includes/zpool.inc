@@ -1,3 +1,4 @@
+cat > /etc/systemd/system/zpool.service << EOF
 [Unit]
 Description=import zpools
 Wants=zfs.service
@@ -8,3 +9,6 @@ Type=oneshot
 
 [Install]
 WantedBy=basic.target
+EOF
+
+systemctl enable zpool.service
