@@ -73,7 +73,6 @@ yum clean all
 
 ##### services
 systemctl enable avahi-daemon.service
-systemctl enable mynetwork.service
 systemctl enable libvirtd.service
 systemctl enable salt-minion.service
 systemctl enable glusterd.service rpcbind.service
